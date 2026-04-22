@@ -1,11 +1,11 @@
-### Project Name
+### FruityVice
 
-Add a description
+Search up a fruit and get its nutrition facts!
 
 ### Screenshots
 
-Put screenshots here
+ill finish more when i have time
 
 #### Links
 
-- [name](http://url)
+- [name](https://picsum.photos/800/600")

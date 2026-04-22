@@ -15,7 +15,7 @@ class UnsplashServiceTest {
         UnsplashService service = new UnsplashServiceFactory().create();
 
         //When
-        Photos photos = service.search(keyString,"Strawberry").blockingGet();
+        Photos photos = service.search(keyString, "Strawberry").blockingGet();
 
         //Then
         assertNotNull(photos.results[0].urls().small());

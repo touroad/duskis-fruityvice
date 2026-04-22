@@ -1,4 +1,4 @@
 package duskis.fruityvice.unsplash;
 
-public record Results(URLS urls) {
+public record Results(Urls urls) {
 }

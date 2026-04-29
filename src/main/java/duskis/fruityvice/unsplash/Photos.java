@@ -1,6 +1,6 @@
 package duskis.fruityvice.unsplash;
 
 public class Photos {
-    Results results[];
+    public Results[] results;
 
 }

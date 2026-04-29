@@ -1,11 +1,15 @@
 ### FruityVice
 
-Search up a fruit and get its nutrition facts!
+Search up a fruit and get its nutrition facts and picture!
 
 ### Screenshots
 
-ill finish more when i have time
+![Screenshots.png](screenshots/Screenshots.png)
 
 #### Links
 
-- [name](https://picsum.photos/800/600")
+- [Fruity Vice](https://www.fruityvice.com/)
+- [unsplash](https://unsplash.com/)
+- [Junit](https://junit.ord)
+- [Mockito](https://site.mockito.org/)
+- [GitHub](https://github.com/)

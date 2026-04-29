@@ -1,5 +1,8 @@
 package duskis.fruityvice;
 
+import com.andrewoid.apikeys.ApiKey;
+import duskis.fruityvice.unsplash.Photos;
+import duskis.fruityvice.unsplash.UnsplashService;
 import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
@@ -11,6 +14,7 @@ import java.net.URI;
 
 public class FruitController {
     private final FruityService service;
+    private final UnsplashService service2;
     private final JLabel picture;
     private final JTextField name;
     private final JLabel family;
@@ -22,9 +26,10 @@ public class FruitController {
     private final JLabel carbs;
     private final JLabel proteins;
 
-    public FruitController(FruityService service, JLabel picture, JTextField name, JLabel family, JLabel order,
+    public FruitController(FruityService service, UnsplashService service2, JLabel picture, JTextField name, JLabel family, JLabel order,
                            JLabel genus, JLabel calories, JLabel fats, JLabel sugars, JLabel carbs, JLabel proteins) {
         this.service = service;
+        this.service2 = service2;
         this.picture = picture;
         this.name = name;
         this.family = family;
@@ -63,9 +68,10 @@ public class FruitController {
         proteins.setText(String.valueOf(nutritions.protein()));
 
         try {
-            //url is depreciated
-            URL imgUrl = URI.create("https://picsum.photos/800/600").toURL();
-
+            ApiKey apiKey = new ApiKey();
+            String keyString = apiKey.get();
+            Photos photos = service2.search(keyString, "Strawberry").blockingGet();
+            URL imgUrl = URI.create(photos.results[0].urls().small()).toURL();
             ImageIcon imageIcon = new ImageIcon(imgUrl);
             picture.setIcon(imageIcon);
         } catch (MalformedURLException e) {

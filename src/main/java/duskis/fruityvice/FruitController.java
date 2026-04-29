@@ -26,8 +26,9 @@ public class FruitController {
     private final JLabel carbs;
     private final JLabel proteins;
 
-    public FruitController(FruityService service, UnsplashService service2, JLabel picture, JTextField name, JLabel family,
-                           JLabel order, JLabel genus, JLabel calories, JLabel fats, JLabel sugars, JLabel carbs, JLabel proteins) {
+    public FruitController(FruityService service, UnsplashService service2, JLabel picture, JTextField name,
+                           JLabel family, JLabel order, JLabel genus, JLabel calories, JLabel fats, JLabel sugars,
+                           JLabel carbs, JLabel proteins) {
         this.service = service;
         this.service2 = service2;
         this.picture = picture;

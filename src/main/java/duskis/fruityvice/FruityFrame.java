@@ -1,5 +1,8 @@
 package duskis.fruityvice;
 
+import duskis.fruityvice.unsplash.UnsplashService;
+import duskis.fruityvice.unsplash.UnsplashServiceFactory;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -146,7 +149,8 @@ public class FruityFrame extends JFrame {
         add(protein, constraints);
 
         FruityService service = new FruityServiceFactory().create();
-        FruitController fruitController = new FruitController(service, picture, searchbar, family, order,
+        UnsplashService service2 = new UnsplashServiceFactory().create();
+        FruitController fruitController = new FruitController(service, service2, picture, searchbar, family, order,
                 genus, calories, fat, sugar, carbs, protein);
 
         searchbutton.addActionListener(new ActionListener() {
